@@ -1,15 +1,13 @@
 # bdd-marvel
-<!- les titres et dates de sortie des films du plus récent au plus ancien: -->
+<!- les titres et dates de sortie des films du plus récent au plus ancien: ->
 
-```
-
+```sql
 SELECT films.titre_Entite,films.anneeSortie_Films FROM films ORDER BY anneeSortie_Films DESC;
 ```
 
-<!- les noms, prénoms et âges des acteurs ou actrices de plus de 30 ans dans l'ordre alphabetique: -->
+<!- les noms, prénoms et âges des acteurs ou actrices de plus de 30 ans dans l'ordre alphabetique: ->
 
-```
-
+```sql
 SELECT nom_Acteur_actrice, prenom_Acteur_actrice, TIMESTAMPDIFF(YEAR, dateNaissance_Acteur_actrice, CURDATE()) AS age 
 FROM Acteur_actrice 
 WHERE TIMESTAMPDIFF(YEAR, dateNaissance_Acteur_actrice, CURDATE()) > 30 
