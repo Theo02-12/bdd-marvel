@@ -11,6 +11,7 @@ SELECT nom_Acteur_actrice, prenom_Acteur_actrice, TIMESTAMPDIFF(YEAR, dateNaissa
 FROM Acteur_actrice 
 WHERE TIMESTAMPDIFF(YEAR, dateNaissance_Acteur_actrice, CURDATE()) > 30 
 ORDER BY nom_Acteur_actrice, prenom_Acteur_actrice ASC;
+```
 
 la liste des actrices ou acteurs principaux pour un film donné:
 
